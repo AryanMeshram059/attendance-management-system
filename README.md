@@ -592,20 +592,30 @@ Possible future work includes
 
 #  Contributors
 
-This project was developed as part of
+This project was developed as a semester-long course project for **CS 432 – Database Systems** at the **Indian Institute of Technology Gandhinagar** under the guidance of **Prof. Yogesh Kumar Meena**.
 
-> **CS 432 – Database Systems**
+### Team Members
 
-at
-
-> **Indian Institute of Technology Gandhinagar**
-
-under the guidance of
-
-> **Prof. Yogesh Kumar Meena**
+- Aryan Meshram
+- Saksham Chourasia
+- Pallav Biyala 
+- Jahan Zaib
+- Mateen Sharief
 
 ---
 
+##  My Contributions
+
+As part of the project, I contributed to several aspects of the system, including:
+
+- Developed significant portions of the frontend using **React**, **Vite**, and **Tailwind CSS**.
+- Built and integrated backend APIs using **Node.js** and **Express.js**.
+- Implemented **JWT-based authentication** and role-based access control (RBAC).
+- Designed and integrated attendance management workflows across the frontend and backend.
+- Participated in implementing advanced database concepts introduced throughout the project, including indexing, transaction management, and distributed database features.
+- Assisted with system integration, testing, debugging, documentation, and final project demonstrations.
+
+---
 #  License
 
 This repository is intended for academic and educational purposes.
