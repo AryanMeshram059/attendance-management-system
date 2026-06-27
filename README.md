@@ -567,23 +567,7 @@ DB_NAME=
 
 
 #  Demonstration Videos
-
-The repository also contains demonstration videos illustrating the functionality of different modules.
-
-| Demo | Description |
-|------|-------------|
-| Full Demo | Complete system walkthrough |
-| Authentication | JWT Authentication |
-| Attendance Workflow | Faculty & Student Operations |
-| Transactions | Rollback & Recovery |
-| Distributed Database | Query Routing & Sharding |
-
-Store the videos inside
-
-```
-demo/
-```
-
+You can find the demonstration videos with proper explanation in the reports.
 ---
 
 #  Future Improvements
