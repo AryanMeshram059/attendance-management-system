@@ -167,23 +167,6 @@ Relationships between these entities were carefully designed to minimize redunda
 
 ---
 
-###  Placeholder
-
-> Insert ER Diagram here.
-
-```
-images/er_diagram.png
-```
-
----
-
-> Insert Relational Schema here.
-
-```
-images/schema.png
-```
-
----
 
 # Phase II — Database Optimization & Indexing
 
