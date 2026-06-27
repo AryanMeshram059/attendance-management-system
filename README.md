@@ -86,20 +86,6 @@ E --> H
 
 ---
 
-## System Screenshots
-
-> Replace the placeholders below with actual screenshots.
-
-| Module | Preview |
-|----------|---------|
-| Login Page | `images/login.png` |
-| Dashboard | `images/dashboard.png` |
-| Attendance Portal | `images/attendance.png` |
-| Admin Panel | `images/admin.png` |
-| Student Portal | `images/student.png` |
-| Analytics | `images/analytics.png` |
-
----
 
 #  Technology Stack
 
@@ -139,31 +125,21 @@ E --> H
 - Graphviz
 - Postman
 
-# 📚 Project Evolution
+#  Project Evolution
 
-The project was developed over **four incremental phases** as part of the semester-long **CS 432 – Database Systems** course. Each phase introduced new database concepts while extending the capabilities of the previous implementation.
+The project was developed over **four incremental phases**. Each phase introduced new database concepts while extending the capabilities of the previous implementation.
 
-Instead of building an attendance management application from scratch every time, the system evolved into a progressively more sophisticated database platform, closely resembling the architecture of modern DBMSs.
 
 ---
 
 # Phase I — Relational Database Design
 
-### 🎯 Objective
+###  Objective
 
 The primary objective of the first phase was to design a robust relational database capable of handling the workflows of an attendance management platform while maintaining data consistency and eliminating redundancy.
 
 ---
-
-### 📌 Problem Statement
-
-Educational institutions maintain large volumes of structured information involving students, faculty, courses, classrooms and attendance records. A poorly designed schema often leads to redundancy, update anomalies and inconsistent data.
-
-The first phase focused on designing a normalized relational database that could efficiently model these relationships.
-
----
-
-### ⚙️ Implementation
+###  Implementation
 
 The following database engineering concepts were implemented:
 
@@ -191,7 +167,7 @@ Relationships between these entities were carefully designed to minimize redunda
 
 ---
 
-### 📸 Placeholder
+###  Placeholder
 
 > Insert ER Diagram here.
 
@@ -264,36 +240,6 @@ Supported operations include:
 The implementation demonstrates how balanced indexing structures reduce search complexity and improve database performance for large datasets.
 
 ---
-
-###  Performance Evaluation
-
-The custom B+ Tree implementation was benchmarked against traditional search methods to compare:
-
-- Search Performance
-- Insertion Performance
-- Range Query Efficiency
-- Scalability
-
----
-
-###  Placeholder
-
-> B+ Tree Visualization
-
-```
-images/bplustree.png
-```
-
----
-
-> Performance Comparison
-
-```
-images/bplustree_benchmark.png
-```
-
----
-
 # Phase III — Transaction Processing & Recovery
 
 ###  Objective
@@ -346,20 +292,6 @@ The system was evaluated under multiple simultaneous operations to ensure:
 - Isolation
 - Data Consistency
 - Correct Transaction Ordering
-
----
-
-###  Placeholder
-
-```
-images/transaction_flow.png
-```
-
----
-
-```
-images/wal.png
-```
 
 ---
 
@@ -426,20 +358,6 @@ and discusses how distributed systems balance these competing requirements.
 
 ---
 
-###  Placeholder
-
-```
-images/sharding_architecture.png
-```
-
----
-
-```
-images/query_router.png
-```
-
----
-
 ##  Learning Outcomes
 
 Through four progressively challenging development phases, this project provided hands-on exposure to concepts typically taught independently in database courses.
@@ -464,77 +382,6 @@ Throughout the project, different components were evaluated using benchmarking t
 
 ---
 
-#  B+ Tree Performance Analysis
-
-Traditional database systems rely heavily on indexing structures to reduce search latency. To understand this process, a custom **B+ Tree** implementation was developed from scratch and evaluated against conventional search techniques.
-
-The implementation supports:
-
-- Search
-- Insert
-- Delete
-- Update
-- Range Queries
-- Node Splitting
-- Node Merging
-
-The balanced nature of B+ Trees ensures logarithmic search complexity while supporting efficient sequential traversal for range queries.
-
----
-
-## Performance Metrics
-
-The following metrics were considered during evaluation.
-
-| Metric | Description |
-|---------|-------------|
-| Search Time | Time required to locate a record |
-| Insertion Time | Time required to insert a new record |
-| Update Time | Modification latency |
-| Range Query Performance | Sequential retrieval efficiency |
-| Tree Height | Effect on search complexity |
-
----
-
-###  Benchmark Results
-
-> **Placeholder**
-
-```
-images/bplustree_benchmark.png
-```
-
----
-
-### 📸 B+ Tree Visualization
-
-> **Placeholder**
-
-```
-images/bplustree_visualization.png
-```
-
----
-
-#  Transaction Processing Evaluation
-
-Database transactions must guarantee that multiple operations execute safely without leaving the system in an inconsistent state.
-
-The transaction manager was evaluated under different execution scenarios to validate correctness.
-
----
-
-## ACID Properties
-
-| Property | Implementation |
-|----------|----------------|
-| Atomicity | Rollback of incomplete transactions |
-| Consistency | Constraint validation |
-| Isolation | Independent concurrent execution |
-| Durability | Write Ahead Logging |
-
----
-
 ## Failure Scenarios Tested
 
 - Interrupted transactions
@@ -547,96 +394,6 @@ The recovery mechanism successfully restored the database to a consistent state 
 
 ---
 
-###  Transaction Flow
-
-> **Placeholder**
-
-```
-images/transaction_execution.png
-```
-
----
-
-###  WAL Recovery
-> **Placeholder**
-
-```
-images/wal_recovery.png
-```
-
----
-
-#  Distributed Database Evaluation
-
-The final implementation distributes records across multiple database shards using **Student-ID based hash partitioning**.
-
-Instead of storing all records inside a single database instance, incoming requests are routed dynamically to the appropriate shard.
-
----
-
-## Sharding Strategy
-
-```
-Student ID
-
-↓
-
-Hash Function
-
-↓
-
-Shard Selection
-
-↓
-
-Execute Query
-```
-
----
-
-## Advantages
-
-- Reduced storage bottlenecks
-- Better horizontal scalability
-- Faster query execution
-- Lower load per database instance
-- Improved parallelism
-
----
-
-## Distributed Queries
-
-Certain operations require accessing multiple shards simultaneously.
-
-Examples include:
-
-- Global attendance statistics
-- Overall student analytics
-- Multi-shard administrative queries
-
-The query router coordinates these requests while abstracting shard locations from the frontend.
-
----
-
-###  Sharding Architecture
-
-> **Placeholder**
-
-```
-images/sharding_architecture.png
-```
-
----
-
-###  Query Routing
-
-> **Placeholder**
-
-```
-images/query_router.png
-```
-
----
 
 #  Stress Testing
 
@@ -654,149 +411,233 @@ The objective was to evaluate:
 
 ---
 
-## Test Configuration
 
-| Parameter | Value |
-|-----------|-------|
-| Tool | Locust |
-| Concurrent Users | **1000** |
-| Protocol | HTTP |
-| Target | REST API |
+#  Repository Structure
 
----
+The repository is organized into modular components to separate frontend, backend, documentation and evaluation artifacts.
 
-## Metrics Collected
-
-- Average Response Time
-- Median Response Time
-- 95th Percentile Latency
-- Requests per Second
-- Concurrent Users
-- Success Rate
-- Failure Rate
-
----
-
-###  Locust Dashboard
-
-> **Placeholder**
-
-```
-images/locust_dashboard.png
-```
-
----
-
-###  Throughput
-
-> **Placeholder**
-
-```
-images/throughput.png
+```text
+distributed-attendance-management-system
+│
+├── backend/                # Express.js Backend
+│   ├── controllers/
+│   ├── middleware/
+│   ├── routes/
+│   ├── utils/
+│   ├── config/
+│   └── server.js
+│
+├── frontend/               # React + Vite Frontend
+│   ├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── assets/
+│   └── App.jsx
+│
+├── reports/
+│   ├── Phase_1_Report.pdf
+│   ├── Phase_2_Report.pdf
+│   ├── Phase_3_Report.pdf
+│   └── Phase_4_Report.pdf
+│
+├── images/
+│
+├── demo/
+│
+├── docs/
+│
+└── README.md
 ```
 
 ---
 
-###  Response Time
+#  Project Documentation
 
-> **Placeholder**
+The project was developed incrementally over four milestones.
+
+Each milestone introduces progressively advanced database engineering concepts while extending the previous implementation.
+
+| Phase | Topics Covered |
+|--------|----------------|
+| Phase I | Relational Database Design, ER Modelling, Normalization |
+| Phase II | REST APIs, JWT Authentication, RBAC, Query Optimization, B+ Trees |
+| Phase III | ACID Transactions, WAL, Rollback, Crash Recovery |
+| Phase IV | Horizontal Sharding, Query Routing, Distributed Databases |
+
+Complete reports are available inside the **reports/** directory.
+
+---
+
+#  Getting Started
+
+## Clone Repository
+
+```bash
+git clone https://github.com/<username>/distributed-attendance-management-system.git
+
+cd distributed-attendance-management-system
+```
+
+---
+
+## Backend Setup
+
+```bash
+cd backend
+
+npm install
+
+npm run dev
+```
+
+Backend server starts on
 
 ```
-images/response_time.png
+http://localhost:3000
 ```
 
 ---
 
-###  Concurrent Users
+## Frontend Setup
 
-> **Placeholder**
+```bash
+cd frontend
+
+npm install
+
+npm run dev
+```
+
+Frontend runs on
 
 ```
-images/concurrent_users.png
+http://localhost:5173
 ```
 
 ---
 
-#  Database Concepts Demonstrated
+## Database Setup
 
-The project combines several concepts that are typically taught independently in a database systems curriculum.
+Configure MySQL before running the application.
 
-## Relational Databases
+Create the required databases and import the schema provided in the documentation.
 
-- Database Normalization
-- ER Modelling
-- Schema Design
-- Referential Integrity
-- SQL Constraints
+For the distributed version, configure multiple database shards according to the project documentation.
 
----
+Example:
 
-## Backend Engineering
+```
+Shard 0
 
-- REST APIs
-- JWT Authentication
-- RBAC
-- CRUD Operations
-- Express Middleware
+Shard 1
 
----
+Shard 2
+```
 
-## Database Internals
+Update database credentials inside
 
-- B+ Tree Indexing
-- Query Optimization
-- Transaction Processing
-- Write Ahead Logging
-- Crash Recovery
+```
+backend/config
+```
+
+before starting the server.
 
 ---
 
-## Distributed Systems
+#  Environment Variables
 
-- Horizontal Sharding
-- Query Routing
-- Hash Partitioning
-- CAP Theorem
-- Scalability
+Example
+
+```
+PORT=
+
+JWT_SECRET=
+
+DB_HOST=
+
+DB_USER=
+
+DB_PASSWORD=
+
+DB_NAME=
+```
 
 ---
 
-## Software Engineering
 
-- Full Stack Development
-- Modular Backend Architecture
-- Performance Evaluation
-- Stress Testing
-- Benchmarking
 
----
-#  Demonstration
-The repository also contains demonstration videos showcasing different aspects of the system.
+#  Demonstration Videos
+
+The repository also contains demonstration videos illustrating the functionality of different modules.
 
 | Demo | Description |
 |------|-------------|
-| Full Demo | End-to-end walkthrough |
-| Authentication | JWT login & authorization |
-| Attendance Workflow | Student & faculty operations |
-| Transaction Processing | Rollback & recovery |
-| Distributed Sharding | Query routing between shards |
+| Full Demo | Complete system walkthrough |
+| Authentication | JWT Authentication |
+| Attendance Workflow | Faculty & Student Operations |
+| Transactions | Rollback & Recovery |
+| Distributed Database | Query Routing & Sharding |
+
+Store the videos inside
+
+```
+demo/
+```
 
 ---
 
-##  Demo Placeholders
+#  Future Improvements
 
-```
-demo/full_demo.mp4
-```
+Although the current implementation demonstrates the core concepts of modern database systems, several extensions can further improve the platform.
 
-```
-demo/sharding_demo.mp4
-```
+Possible future work includes
 
-```
-demo/transaction_demo.mp4
-```
+- Two Phase Commit (2PC)
+- Replication & Fault Tolerance
+- Distributed Transaction Manager
+- Automatic Load Balancing
+- Query Cost Optimizer
+- Caching Layer using Redis
+- Docker-based Deployment
+- Kubernetes Orchestration
+- Monitoring using Prometheus & Grafana
+- Cloud Deployment (AWS/GCP/Azure)
 
-```
-demo/auth_demo.mp4
-```
+---
+
+
+#  Contributors
+
+This project was developed as part of
+
+> **CS 432 – Database Systems**
+
+at
+
+> **Indian Institute of Technology Gandhinagar**
+
+under the guidance of
+
+> **Prof. Yogesh Kumar Meena**
+
+---
+
+#  License
+
+This repository is intended for academic and educational purposes.
+
+---
+
+# Acknowledgements
+
+We would like to thank **Prof. Yogesh Kumar Meena** for designing the project milestones that progressively introduced real-world database engineering concepts throughout the semester.
+
+The project successfully integrates concepts from
+
+- Database Systems
+- Distributed Databases
+- Backend Development
+- Software Engineering
+- Performance Evaluation
+
+into a single end-to-end full stack application.
